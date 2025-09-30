@@ -21,6 +21,14 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 
-	
+	void recevoirCoup(int forceCoup) {
+		force -= forceCoup;
+		if (force < 1) {
+			parler("J'abandonne !");
+		}
+		else {
+			parler("Aïe !");
+		}
+	}
 	
 }
