@@ -4,17 +4,23 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion;
+	private Village village;
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
 		this.force = force;
 		this.effetPotion = 1;
+		this.village = village;
 	}
 
 	public String getNom() {
 		return nom;
 	}
 	
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+
 	public int getEffetPotion() {
 		return effetPotion;
 	}
