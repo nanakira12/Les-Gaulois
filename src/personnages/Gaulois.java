@@ -15,6 +15,10 @@ public class Gaulois {
 		return nom;
 	}
 	
+	public int getEffetPotion() {
+		return effetPotion;
+	}
+	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
@@ -36,11 +40,18 @@ public class Gaulois {
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force/3);
+		int coup = force*effetPotion;
+		romain.recevoirCoup(coup/3);
+		if (effetPotion>1) {
+			effetPotion=effetPotion-1;
+		}
+		else {
+			effetPotion=1;
+		}
 	}
 	
 	public void boirePotion(int forcePotion) {
-		
+		effetPotion=forcePotion;
 	}
 
 }

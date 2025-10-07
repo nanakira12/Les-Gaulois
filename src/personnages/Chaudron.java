@@ -4,9 +4,14 @@ public class Chaudron {
 	private int quantitePotion;
 	private int forcePotion;
 	
-	public void remplirChaudron(int quantite, int forcePotion) {
+	public Chaudron(int quantitePotion, int forcePotion) {
+		this.quantitePotion = quantitePotion;
+		this.forcePotion = forcePotion;
+	}
+
+	public void remplirChaudron(int quantite, int force) {
 		quantitePotion=quantite;
-		forcePotion=forcePotion;	
+		forcePotion=force;
 	}
 	
 	public boolean resterPotion() {
@@ -20,6 +25,10 @@ public class Chaudron {
 		}
 		return quantitePotion;
 	}
-	
+
+	public int getForcePotion() {
+		return forcePotion;
+	}
+
 	
 }
